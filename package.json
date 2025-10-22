@@ -1,0 +1,14 @@
+{
+  "name": "badbeat-sportswire",
+  "version": "7.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "node fetch-and-generate.js",
+    "build": "node build-static.js",
+    "full": "node fetch-and-generate.js && node build-static.js",
+    "prefill": "node scripts/prefill-headshots.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
