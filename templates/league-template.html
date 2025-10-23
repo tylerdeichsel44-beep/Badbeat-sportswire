@@ -1,43 +1,56 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{LEAGUE} — Badbeat Sportswire</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fafafa;color:#111}
-header{background:#111;color:#fff;text-align:center;padding:24px 12px}
-header h1{margin:0;font-size:28px;letter-spacing:1px}
-header p{margin:6px 0 0;color:#ddd;font-style:italic}
-nav a{color:#fff;text-decoration:none;margin:0 8px}
-main{max-width:1100px;margin:24px auto;padding:0 16px}
-.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:16px;margin-bottom:16px}
-.grid{display:grid;gap:16px}
-.ad{border:1px dashed #bbb;background:#f3f3f3;padding:12px;border-radius:10px;text-align:center;color:#666;margin:16px 0}
-table{width:100%;border-collapse:collapse}
-th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
-thead th{border-bottom:2px solid #ddd;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#444}
-footer{font-size:12px;color:#666;text-align:center;padding:24px;border-top:1px solid #eee}
-.logo{width:36px;height:36px;object-fit:contain;margin-right:8px;vertical-align:middle;border-radius:6px;background:#f2f2f2}
-.headshot{width:64px;height:64px;border-radius:8px;object-fit:cover;background:#f2f2f2}
-.badge{display:inline-block;background:#eee;border-radius:999px;padding:4px 10px;font-size:12px;margin-left:6px}
-.flex{display:flex;align-items:center;gap:10px}
-.wrap{flex-wrap:wrap}
-.scoreboard{background:#fff7e6;border:1px solid #ffd591;padding:10px;border-radius:12px;margin:10px 0;font-size:14px}
-.timez{color:#555;font-size:12px}</style></head><body>{HEADER}
-<main>
-  <div class="card">
-    <h2>{LEAGUE} — {DATE} <span class="badge">Schedule</span></h2>
-    <div class="timez">All times local (<span id="bb-tz"></span>)</div>
-    <div class="ad">Top Banner Ad — 728×90</div>
-    <table><thead><tr><th>Time</th><th>Away</th><th>Home</th><th>Odds</th><th>Live</th><th>Preview</th></tr></thead>
-    <tbody>{#GAMES}<tr data-event-id="{eventId}" data-league="{leagueKey}">
-      <td><span class="bb-time" data-iso="{iso}">{time}</span></td>
-      <td><img class="logo" src="{awayLogo}" alt="{away} logo"> <a href="/teams/{leagueKey}/{awaySlug}.html">{away}</a></td>
-      <td><img class="logo" src="{homeLogo}" alt="{home} logo"> <a href="/teams/{leagueKey}/{homeSlug}.html">{home}</a></td>
-      <td>{odds}</td>
-      <td><div class="scoreboard" data-score="{eventId}">—</div></td>
-      <td><a href="/games/{slug}.html">View</a></td>
-    </tr>{/GAMES}</tbody></table>
-  </div>
-</main>
-<footer>All content is automatically generated for informational purposes only. Not betting advice. © {YEAR} Badbeat Sportswire</footer>
-<script src="/assets/js/live.js" defer></script>
-<script>window.__BB_PAGE__={PAGE_JSON}</script>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{LEAGUE}} — Badbeat Sportswire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fafafa;color:#111}
+    header{background:#111;color:#fff;text-align:center;padding:24px 12px}
+    header h1{margin:0;font-size:28px;letter-spacing:1px}
+    header p{margin:6px 0 0;color:#ddd;font-style:italic}
+    nav a{color:#fff;text-decoration:none;margin:0 8px}
+    main{max-width:1000px;margin:24px auto;padding:0 16px}
+    .card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:16px;margin-bottom:16px}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+    thead th{border-bottom:2px solid #ddd;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#444}
+    .ad{border:1px dashed #bbb;background:#f3f3f3;padding:12px;border-radius:10px;text-align:center;color:#666;margin:16px 0}
+    footer{font-size:12px;color:#666;text-align:center;padding:24px;border-top:1px solid #eee}
+    .pill{display:inline-block;background:#eee;border-radius:999px;padding:4px 10px;font-size:12px;margin-left:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BADBEAT SPORTSWIRE</h1>
+    <p>Neutral news from the betting edge — updated hourly</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="nfl.html">NFL</a> <a href="nba.html">NBA</a> <a href="nhl.html">NHL</a> <a href="wnba.html">WNBA</a> <a href="pga.html">PGA</a> <a href="cfb.html">CFB</a> <a href="cbb-men.html">CBB Men</a> <a href="cbb-women.html">CBB Women</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card">
+      <h2>{{LEAGUE}} — {{DATE}} <span class="pill">Schedule</span></h2>
+      <div class="ad">Top Banner Ad — 728×90</div>
+      <table>
+        <thead><tr><th>Time</th><th>Away</th><th>Home</th><th>Odds</th><th>Preview</th></tr></thead>
+        <tbody>
+          {{#GAMES}}
+            <tr>
+              <td>{{time}}</td>
+              <td>{{away}}</td>
+              <td>{{home}}</td>
+              <td>{{odds}}</td>
+              <td><a href="games/{{slug}}.html">View</a></td>
+            </tr>
+          {{/GAMES}}
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer>
+    All content is automatically generated for informational purposes only. Not betting advice. © {{YEAR}} Badbeat Sportswire
+  </footer>
+</body>
+</html>
